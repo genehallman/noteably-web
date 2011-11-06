@@ -1,0 +1,6 @@
+<%=render :partial => "sidebar" %>
+
+<div id="note_holder">
+	<%=render current_user.last_opened_note if current_user.last_opened_note %>
+</div>
+<%=render :partial => "footer" %>

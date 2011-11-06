@@ -1,0 +1,6 @@
+<%=form_for section, :url => [section.note, section], :remote => true do |f| %>
+	<%=f.text_area :content, :rows => 2 %>
+	<div class="actions">
+		<%= link_to image_tag('/assets/close.png'), [section.note, section], :remote => true, :method => :delete %>
+	</div>
+<%end%>

@@ -7,3 +7,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function fadeContent(html) {
+	$("#content").fadeOut(null, function() {
+		$("#content").html(html);
+		$("#content").fadeIn();	
+	});
+}
+
+function appendSection(html) {
+	$(html).hide().appendTo('#note').fadeIn();
+}
+
+function saveSection(e) {
+	var textbox = $(e.target);
+	textbox.parent('form').submit();
+}
+
+$("textarea", ".edit_section").live("change", saveSection);
+$("textarea", ".new_section").live("change", saveSection);
+$("textarea", ".new_section").live("focus", saveSection);

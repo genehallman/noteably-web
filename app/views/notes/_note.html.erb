@@ -1,0 +1,22 @@
+<h1><%=note.name%></h1>
+<div id="note" class="note_id_<%=note.id%>">
+</div>
+
+<script>
+	var urls = <%= raw(([new_note_section_path(note)] + note.sections.map { |s| note_section_path(note, s) }.reverse).to_json) %>;
+
+	function fetchNextSection(url) {
+		$.ajax({
+		  url: url,
+			dataType: 'script',
+			success: function() {
+				if (urls.length > 0) {
+					fetchNextSection(urls.pop())
+				}
+			}
+		});
+	}
+	if (urls.length > 0) {
+		fetchNextSection(urls.pop())
+	}
+</script>

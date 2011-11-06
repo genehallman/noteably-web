@@ -1,0 +1,3 @@
+$('.new_section').replaceWith("<%= escape_javascript(render @section) %>");
+$("textarea", "#edit_section_<%=@section.id%>").focus();
+appendSection("<%= escape_javascript(render @new_section) %>");

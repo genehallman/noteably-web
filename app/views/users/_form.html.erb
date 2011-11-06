@@ -1,0 +1,8 @@
+<%= form_for @user, :remote => true do |f| %>
+	<dl>
+		<dt><%= f.label :email %></dt><dd><%= f.text_field :email %></dd>
+		<dt><%= f.label :password, f.object.new_record? ? nil : "Change password" %></dt><dd><%= f.password_field :password %></dd>
+		<dt><%= f.label :password_confirmation %></dt><dd><%= f.password_field :password_confirmation %></dd>
+	</dl>
+  <%= submit_link "register" %>
+<% end %>

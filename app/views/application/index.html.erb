@@ -1,0 +1,8 @@
+<%= javascript_tag do %>
+	$(document).ready(function() {
+		$.ajax({
+		  url: '<%=app_path%>',
+			dataType: 'script'
+		});
+	});
+<% end %>

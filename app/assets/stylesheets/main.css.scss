@@ -1,0 +1,98 @@
+* {
+	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif
+}
+body {
+	overflow:hidden;
+	background-color:#f8f8f8;
+	outline: none;
+	margin:0px;
+}
+h1 {
+	margin-top:0px;
+	font-family:Lucida Console, Monaco5, monospace;
+}
+
+#content {
+	position:absolute;
+	top:0px;
+	left:0px;
+	bottom:80px;
+	right:0px;
+	z-index:10;
+	overflow-y:scroll;
+}
+
+#sidebar {
+	width:300px;
+	height:100%;
+	top:0px;
+	left:-300px;
+	z-index:50;
+	opacity:0.9;
+	position:fixed;
+	#tab {
+		width:50px;
+		height:100px;
+		right:-50px;
+		top:10px;
+		position:absolute;
+		@include border-radius(0px 20px 20px 0px);
+		background-image:url("/assets/tab.png");
+	}
+	&, #tab {
+		background-color:#333;
+		border:2px solid gray;
+		border-left:0px;
+		@include box-shadow(2px 2px 5px 0px #000000);
+	}
+}
+#note_holder {
+	padding:20px 20px 20px 70px;
+	#note {
+		form {
+			position:relative;
+			padding-right:100px;
+			div.actions {
+				display:none;
+				position:absolute;
+				top:4px;
+				right:0px;
+				width:50px;
+			}
+			&.edit_section:hover div.actions {
+				display:block;
+			}
+			textarea {
+				width:100%;
+				padding-right:50px;
+				border:0px;
+				font-size:32px;
+				padding:20px;
+				@include border-radius(4px);
+				outline: none;
+				background-color:#eee;
+				color:#666;
+				&:focus {
+					color:#000;
+					background-color:#fff;
+					& + div.actions {
+						display:block;
+					}
+				}
+			}
+		
+		
+			a {
+				display:block;
+			}
+		}
+	}
+}
+#footer {
+	position:fixed;
+	width:100%;
+	bottom:0px;
+	height:80px;
+	left:0px;
+	margin-left:70px;
+}

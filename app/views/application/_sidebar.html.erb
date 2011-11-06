@@ -1,0 +1,9 @@
+<div id="sidebar">
+	<div id="tab">
+	</div>
+</div>
+
+<script>
+	$("#tab").live('mouseover', function() { $("#sidebar").animate({"left": "0px"}, 500); });
+	$("#sidebar").live('mouseleave', function() { $("#sidebar").animate({"left": "-300px"}, 500); });
+</script>

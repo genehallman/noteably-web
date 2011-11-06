@@ -1,4 +1,13 @@
 Website::Application.routes.draw do
+  root :to => 'application#index'
+  match "app" => "application#app"
+
+  resource :user_session, :only => [:new, :create, :destroy]
+  resources :users, :only => [:new, :create]
+  resources :notes, :except => [:edit] do
+    resources :sections, :except => [:edit]
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
