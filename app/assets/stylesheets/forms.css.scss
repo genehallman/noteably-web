@@ -1,9 +1,12 @@
 form {
+	* {
+		font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
+	}
 	dl {
 		margin-bottom:30px;
 		dt {
 			display:block;
-			width:140px;
+			width:180px;
 			float:left;
 			text-align:right;
 			margin:4px;
