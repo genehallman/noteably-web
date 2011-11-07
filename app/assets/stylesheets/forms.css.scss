@@ -1,0 +1,18 @@
+form {
+	dl {
+		dt {
+			display:block;
+			width:270px;
+			float:left;
+			text-align:right;
+			margin:4px;
+		}
+		dd {
+			display:block;
+		}
+	}
+	input {
+		outline-color:#c10000;
+		color:#333;
+	}
+}

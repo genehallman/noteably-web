@@ -1,0 +1,44 @@
+#note_holder {
+	padding:20px 20px 20px 70px;
+	#note {
+		form {
+			position:relative;
+			padding-right:90px;
+			div.actions {
+				display:none;
+				position:absolute;
+				top:4px;
+				right:0px;
+				width:50px;
+			}
+			&.edit_section:hover div.actions {
+				display:block;
+			}
+			textarea {
+				width:100%;
+				border:0px;
+				padding:10px;
+				font-size:24px;
+				@include border-radius(4px);
+				outline: none;
+				background-color:#eee;
+				color:#666;
+				&:focus {
+					color:#000;
+					background-color:#fff;
+					& + div.actions {
+						display:block;
+					}
+				}
+			}
+			a {
+				display:block;
+			}
+			&.new_section textarea {
+				background-image:url('/assets/new_section.png');
+				background-repeat:no-repeat;
+				background-position:10px 15px;
+			}
+		}
+	}
+}

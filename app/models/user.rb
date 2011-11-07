@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
   
   private
     def first_note
-      note = Note.create!(:name => self.email, :user => self)
+      note = Note.create!(:user => self)
+      note.sections.create!(:content => "this is your very first note\ncome on, have a play")
       self.last_opened_note = note
       self.save
     end

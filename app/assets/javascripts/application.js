@@ -16,7 +16,15 @@ function fadeContent(html) {
 }
 
 function appendSection(html) {
-	$(html).hide().appendTo('#note').fadeIn();
+	var section = $(html);
+	section.hide().appendTo('#note');
+
+	$('textarea', section).autoResize({minHeight:28, maxHeight: 200, extraSpace: 0});	
+	$('textarea', section).typing({stop: saveSection,	delay: 1500	});
+	window.sec = section;
+	$("textarea", ".new_section").bind("focus", saveSection);
+
+	section.fadeIn();
 }
 
 function saveSection(e) {
@@ -24,6 +32,14 @@ function saveSection(e) {
 	textbox.parent('form').submit();
 }
 
-$("textarea", ".edit_section").live("change", saveSection);
-$("textarea", ".new_section").live("change", saveSection);
-$("textarea", ".new_section").live("focus", saveSection);
+function showAbout() {
+	$('#about').fadeIn();
+	$('#about').focus();
+}
+function hideAbout() {
+	$('#about').fadeOut();
+}
+
+$(document).ready(function() {
+	$('#about').live('click', hideAbout);
+});

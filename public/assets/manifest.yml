@@ -1,7 +1,12 @@
 --- 
 close.png: close-1c98d28bd3815b7d3330d5f2dbe6c215.png
+logo.png: logo-66d97f095b0c239b455fd0a9dd2efb35.png
+logo_light.png: logo_light-8c1a6dc759a03e8775dbbd3f16a39717.png
+new_section.png: new_section-22fb8bac66cccb3264a7a197730f5d1a.png
 tab.png: tab-599a0cdb8c9c0e5d4e9b505e079966b6.png
+jquery.autoresize.js: jquery.autoresize-3012f828aebedc5699c73bdbf8130875.js
+jquery.typing-0.2.0.js: jquery.typing-0.2.0-253b43efee3d2407118deaad15a3b56b.js
 jquery-ui.min.js: jquery-ui.min-2b432ef5545e6620f94e7638b7574058.js
 jquery.min.js: jquery.min-ac6382033c1c5e27ebbc5a5a0597ccb9.js
-application.js: application-797d41f95a0c76dd7753a1ea406499d7.js
-application.css: application-51a7080e76255f70172dbefd9a7bb4f4.css
+application.js: application-b018e8c10478412c89d539a0cdadeee3.js
+application.css: application-c9c93e11e772de014cfdb4591fc483be.css

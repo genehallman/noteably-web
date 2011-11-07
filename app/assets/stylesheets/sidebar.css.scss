@@ -1,0 +1,27 @@
+#sidebar {
+	width:300px;
+	height:100%;
+	top:0px;
+	left:-300px;
+	z-index:50;
+	opacity:0.9;
+	position:fixed;
+	color:white;
+	padding-top:30px;
+	text-align:center;
+	#tab {
+		width:50px;
+		height:100px;
+		right:-50px;
+		top:10px;
+		position:absolute;
+		@include border-radius(0px 20px 20px 0px);
+		background-image:url("/assets/tab.png");
+	}
+	&, #tab {
+		background-color:#333;
+		border:2px solid gray;
+		border-left:0px;
+		@include box-shadow(2px 2px 5px 0px #000000);
+	}
+}

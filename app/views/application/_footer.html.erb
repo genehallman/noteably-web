@@ -1,3 +1,9 @@
 <div id="footer">
-	<%=link_to "logout", user_session_path, :method => :delete, :remote => true %>
+
+	<%= image_tag '/assets/logo.png', :class => "logo" %>
+	
+	<div class="menu">
+		<%= link_to_function "about", "showAbout()", :class => "button" %>
+		<%= link_to "logout", user_session_path, :method => :delete, :class => "button" %>
+	</div>
 </div>

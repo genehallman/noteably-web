@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user].only)
+    @user = User.new(params[:user])
     @user.save
     javascript_redirect root_url
   end

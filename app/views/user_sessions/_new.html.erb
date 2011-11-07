@@ -1,9 +1,20 @@
 <div class="dialog">
+
+	<h1>Simply. Beautiful. Notes.</h1>
 	<%= form_for @user_session, :url => user_session_path, :remote => true do |f| %>
-	  <dl>
+		<dl>
 			<dt><%= f.label :email %></dt><dd><%= f.text_field :email %></dd>
 			<dt><%= f.label :password %></dt><dd><%= f.password_field :password %></dd>
 		</dl>
-	  <%= submit_link "login" %> | <%=link_to "create account", new_user_path, :remote => true %>
+	  <%= submit_link "login" %>
+		<%=link_to "back to create account", new_user_path, :remote => true, :class => "button" %>
 	<% end %>
 </div>
+
+<script>
+	$('form.new_user_session').keyup(function() {
+		if (event.which === 13) {
+			$(this).submit();
+		}
+	});
+</script>

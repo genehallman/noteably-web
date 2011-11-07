@@ -1,8 +1,14 @@
-<%= form_for @user, :remote => true do |f| %>
-	<dl>
-		<dt><%= f.label :email %></dt><dd><%= f.text_field :email %></dd>
-		<dt><%= f.label :password, f.object.new_record? ? nil : "Change password" %></dt><dd><%= f.password_field :password %></dd>
-		<dt><%= f.label :password_confirmation %></dt><dd><%= f.password_field :password_confirmation %></dd>
-	</dl>
-  <%= submit_link "register" %>
-<% end %>
+<div class="dialog">
+	<h1>Simply. Beautiful. Notes.</h1>
+
+	<%= form_for @user, :remote => true do |f| %>
+  	<div style="margin:15px;font-weight:bold;">Sign up - its entirely free, our gift to you</div>
+		<dl>
+			<dt><%= f.label :email %></dt><dd><%= f.text_field :email %></dd>
+			<dt><%= f.label :password, f.object.new_record? ? nil : "Change password" %></dt><dd><%= f.password_field :password %></dd>
+			<dt><%= f.label :password_confirmation %></dt><dd><%= f.password_field :password_confirmation %></dd>
+		</dl>
+	  <%= submit_link "register" %>
+		<%=link_to "login", new_user_session_path, :remote => true, :class => "button" %>
+	<% end %>
+</div>
