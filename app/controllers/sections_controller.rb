@@ -3,6 +3,7 @@ class SectionsController < ApplicationController
   before_filter :find_section
 
   def new
+    @section.content = "another, please"
     render :show
   end
   
@@ -11,8 +12,10 @@ class SectionsController < ApplicationController
 
   def create
     @section.update_attributes(params[:section])
+    @section.content = nil;
     @section.save
     @new_section = current_user.notes.find(params[:note_id]).sections.build
+    @new_section.content = "another, please"
     
   end
   

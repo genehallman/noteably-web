@@ -1,5 +1,11 @@
 #note_holder {
 	padding:20px 20px 20px 70px;
+	h1 {
+		font-size:38px;
+	}
+	a {
+		display:block;
+	}
 	#note {
 		form {
 			position:relative;
@@ -31,13 +37,12 @@
 					}
 				}
 			}
-			a {
-				display:block;
-			}
 			&.new_section textarea {
-				background-image:url('/assets/new_section.png');
-				background-repeat:no-repeat;
-				background-position:10px 15px;
+				color:#ccc;
+				&:focus {
+					color:#fff;
+				}
+				
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 	<h1>Simply. Beautiful. Notes.</h1>
 
 	<%= form_for @user, :remote => true do |f| %>
-  	<div style="margin:15px;font-weight:bold;">Sign up - its entirely free, our gift to you</div>
+  	<div style="margin:15px;font-weight:bold;"><span style="color:#c10000;">Sign up</span> - its entirely free, <span style="color:#555;">our gift to you</span></div>
 		<dl>
 			<dt><%= f.label :email %></dt><dd><%= f.text_field :email %></dd>
 			<dt><%= f.label :password, f.object.new_record? ? nil : "Change password" %></dt><dd><%= f.password_field :password %></dd>
