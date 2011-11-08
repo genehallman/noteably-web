@@ -17,19 +17,18 @@ function fadeContent(html) {
 
 function appendSection(html) {
 	var section = $(html);
-	section.hide().appendTo('#note');
-
+	section.hide().appendTo('#note').fadeIn();
+	
 	$('textarea', section).autoResize({minHeight:28, maxHeight: 200, extraSpace: 20});	
-	$('textarea', section).typing({stop: saveSection,	delay: 500	});
-	window.sec = section;
-	$("textarea", ".new_section").bind("focus", saveSection);
-
-	section.fadeIn();
+	$('textarea', section).typing({stop: saveSection,	delay: 500});
+	$("textarea", section).bind("focus", saveSection);
 }
 
 function saveSection(e) {
 	var textbox = $(e.target);
-	textbox.parent('form').submit();
+	var form = textbox.parent('form');
+	console.log('saving...',form.attr('id'))
+	form.submit();
 }
 
 function showAbout() {

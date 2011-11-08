@@ -1,2 +1,2 @@
-rvm use 1.9.2@noteable --create
+rvm use 1.9.2@noteably --create
 export PATH=./bin:$PATH
