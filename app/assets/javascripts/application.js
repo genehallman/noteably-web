@@ -19,7 +19,7 @@ function appendSection(html) {
 	var section = $(html);
 	section.hide().appendTo('#note').fadeIn();
 	
-	$('textarea', section).autoResize({minHeight:28, maxHeight: 200, extraSpace: 20});	
+	$('textarea', section).autoResize({minHeight:28, maxHeight: 1000000, extraSpace: 20});	
 	$('textarea', section).typing({stop: saveSection,	delay: 500});
 	$("textarea", section).bind("focus", saveSection);
 }
